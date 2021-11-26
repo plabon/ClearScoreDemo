@@ -1,5 +1,5 @@
 # ClearScoreDemo
-Skeleton project for show the architecture of Android project using MVVM, Solid principle and Kotlin coroutine Flow 
+Skeleton project for showing the architecture of Android project using MVVM, Clean architecture and Kotlin coroutine Flow 
 
 
 ## App Architecture
