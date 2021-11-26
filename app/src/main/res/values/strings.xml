@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">ClearScoreDemo</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="home_fragment_label">Home Fragment</string>
+    <string name="details_fragment_label">Details Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="top_text">Your credit score is</string>
+    <string name="bottom_text">out of %1$s</string>
+
+    <!-- Credit Score deatils -->
+    <string name="score_text">Score: %1$s</string>
+    <string name="clientref_text">Client Ref: %1$s</string>
+    <string name="scoreband_text">Score Band: %1$s</string>
+    <string name="current_short_term_debt_text">Current ShortTerm Debt: %1$s</string>
+    <string name="current_shortterm_nonpromotional_debt_text">Current ShortTerm NonPromotional Debt: %1$s</string>
+    <string name="current_short_term_creditlimit_text">Current ShortTerm CreditLimit: %1$s</string>
+    <string name="current_short_term_credit_utilisation_text">Current ShortTerm CreditUtilisation: %1$s</string>
+    <string name="changein_shortterm_debt_text">Change In ShortTerm Debt: %1$s</string>
+    <string name="current_longterm_debt_text">Current LongTerm Debt: %1$s</string>
+    <string name="current_longterm_nonpromotional_debt_text">Current LongTerm NonPromotional Debt: %1$s</string>
+    <string name="num_positive_score_factors">Num Positive Score Factors: %1$s</string>
+    <string name="equifax_score_band_description_text">Equifax ScoreBand Description: %1$s</string>
+
+
+
+</resources>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="credit_info"
+            type="com.jukti.clearscoredemo.domain.model.CreditReportInfoDomainModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context=".ui.details.UserDetailsFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:background="@android:color/white"
+                tools:context=".ui.favorite.FavoriteFragment">
+
+                <TextView
+                    android:id="@+id/score_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="@{@string/score_text(credit_info.score)}"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextContrastCheck" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="30dp" />
+
+                <TextView
+                    android:id="@+id/clientref_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{@string/clientref_text(credit_info.clientRef)}"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toBottomOf="@+id/score_tv" />
+                <TextView
+                    android:id="@+id/scoreband_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{@string/scoreband_text(credit_info.scoreBand)}"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toBottomOf="@+id/clientref_tv" />
+                <TextView
+                    android:id="@+id/current_short_term_debt_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{@string/current_short_term_debt_text(credit_info.currentShortTermDebt)}"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toBottomOf="@+id/scoreband_tv" />
+                <TextView
+                    android:id="@+id/current_shortterm_nonpromotional_debt_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{@string/current_shortterm_nonpromotional_debt_text(credit_info.currentShortTermNonPromotionalDebt)}"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toBottomOf="@+id/current_short_term_debt_tv" />
+
+                <TextView
+                    android:id="@+id/current_short_term_creditlimit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{@string/current_short_term_creditlimit_text(credit_info.currentShortTermCreditLimit)}"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toBottomOf="@+id/current_shortterm_nonpromotional_debt_tv" />
+                <TextView
+                    android:id="@+id/current_short_term_credit_utilisation_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{@string/current_short_term_credit_utilisation_text(credit_info.currentShortTermCreditUtilisation)}"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toBottomOf="@+id/current_short_term_creditlimit_tv" />
+                <TextView
+                    android:id="@+id/changein_shortterm_debt_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{@string/changein_shortterm_debt_text(credit_info.changeInShortTermDebt)}"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toBottomOf="@+id/current_short_term_credit_utilisation_tv" />
+
+                <TextView
+                    android:id="@+id/current_longterm_debt_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{@string/current_longterm_debt_text(credit_info.currentLongTermDebt)}"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toBottomOf="@+id/changein_shortterm_debt_tv" />
+
+                <TextView
+                    android:id="@+id/current_longterm_nonpromotional_debt_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{@string/current_longterm_nonpromotional_debt_text(credit_info.currentLongTermNonPromotionalDebt)}"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toBottomOf="@+id/current_longterm_debt_tv" />
+
+                <TextView
+                    android:id="@+id/num_positive_score_factors_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{@string/num_positive_score_factors(credit_info.numPositiveScoreFactors)}"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toBottomOf="@+id/current_longterm_nonpromotional_debt_tv" />
+
+                <TextView
+                    android:id="@+id/equifax_score_band_description_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{@string/equifax_score_band_description_text(credit_info.equifaxScoreBandDescription)}"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toBottomOf="@+id/num_positive_score_factors_tv" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

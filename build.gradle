@@ -1,0 +1,73 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+
+    ext {
+        compileSdkVersion = 31
+        minSdkVersion = 21
+        targetSdkVersion = 31
+        buildToolsVersion = '30.0.3'
+        multidexVersion = '2.0.1'
+
+        // app dependencies
+        ktxVersion = '1.7.0'
+        appCompatVersion = '1.3.1'
+        constraintLayoutVersion = '2.1.1'
+        navigationVersion = '2.3.5'
+        coordinatorLayoutVersion = '1.1.0'
+        recyclerViewVersion = '1.2.1'
+        recyclerViewSelectionVersion = '1.1.0'
+        materialVersion = '1.4.0'
+        glideVersion = '4.12.0'
+        lifecycleVersion = '2.4.0'
+        lifecycleExtensionVersion = '2.2.0'
+        roomVersion = '2.3.0'
+        dataStoreVersion = "1.0.0"
+
+        // hilt
+        hiltExtensionVersion = '1.0.0-beta01'
+        hiltVersion = '2.38.1'
+        kotlinVersion = '1.6.0'
+        coroutinesVersion = "1.5.0"
+
+        fragmentVersion = '1.3.6'
+        gradleVersion = '7.0.0'
+        ktlintVersion = '0.38.1'
+
+        // network
+        retrofitVersion = '2.9.0'
+        okhttpLoggingVersion = '4.9.0'
+        gsonVersion = '2.8.6'
+
+        // testing
+        junitVersion = '4.13.2'
+        testExtJunit = '1.1.3'
+        espressoVersion = '3.4.0'
+        archTestingVersion = '2.1.0'
+        runnerVersion = '1.0.1'
+        truthVersion = '0.42'
+        uiAutomatorVersion = '2.2.0'
+        hamcrestVersion = '1.3'
+        androidXTestCoreVersion = '1.4.0'
+        androidXTestExtKotlinRunnerVersion = '1.1.3'
+        androidXTestRulesVersion = '1.2.0'
+        robolectricVersion = '4.5.1'
+        mockwebserverVersion = '4.9.2'
+
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.38.1'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
